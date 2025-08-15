@@ -1,0 +1,14 @@
+<h1>My movie lists</h1>
+
+<% @lists.each do |list| %>
+
+<li><%= link_to list.name , list_path(list) %></li>
+
+<% end %>
+
+<h2>Add a list here</h2>
+
+<%= simple_form_for (@list) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Create a list", class: "btn btn-primary" %>
+<% end %>

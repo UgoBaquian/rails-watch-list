@@ -11,6 +11,15 @@
   </head>
 
   <body>
+    <div class="navbar p-3 bg-white">
+      <div>
+        <i class="fa-solid fa-film fa-2xl" style="color: #63E6BE;"></i>
+      </div>
+      <div class="d-flex">
+        <%= link_to "My lists", lists_path , class:"button-primary mx-2" %>
+        <p>Add a new list</p>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
